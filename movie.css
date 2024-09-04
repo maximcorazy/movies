@@ -1,0 +1,329 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+background-color: rgb(240, 240, 240);
+font-family: 'Open Sans', sans-serif;
+height: 100%;
+}
+
+html{
+    height: 100%;
+}
+
+.releases{
+    font-size: 35px;
+    margin-left: 100px;
+    padding: 25px;
+    color: grey;
+
+}
+
+.header{
+background-color: #7a7a7a;
+padding:30px;
+}
+
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    border-bottom: 30px;
+}
+
+.header_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px;
+    height: 60px;
+}
+
+.header_logo{
+font-size: 32px;
+text-decoration: none;
+color:snow;
+}
+
+.header_value{
+    font-style: italic;
+    font-size: 18px;
+    padding: 10px 40px;
+    background-color: #7a7a7a;
+    border: 1px solid snow;
+}
+
+.movies{
+    margin-bottom: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.movie{
+    width: 200px;
+    margin: 5px;
+    position:relative;
+}
+
+.movie_cover_inner{
+position: relative;
+height: 300px;
+}
+
+.movie_cover{
+max-width: 100%;
+height: 100%;
+}
+
+.movie_cover_darkened{
+background-color: #000000;
+opacity:0.1;
+position: absolute;
+top:0;
+left:0;
+right:0;
+max-width: 100%;
+height: 100%;
+z-index: 1;
+}
+
+.movie_cover_darkened:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: width 2s;
+    justify-content: center;
+}
+.modal_show{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_card{
+    color:#ffffff;
+    position:relative;
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.modal_under{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal_poster{
+margin: 0 auto;
+width:270px;
+height:400px;
+}
+
+.modal_button_close{
+ padding: 5px;
+ margin: 10px;
+ align-self: center;
+}
+
+.modal_button_next{
+    padding: 5px;
+    margin: 10px;
+    align-self: center;
+}
+
+.scroll{
+    height: 100%;
+    overflow: hidden;
+}
+
+.modal_buttons{
+    display: flex;
+    justify-content: space-between;
+    padding:40px;
+}
+
+.modal_under{
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 15%;
+    padding-bottom: 20%;
+}
+
+.modal_info{
+    padding-left: 20px;
+}
+
+.count{
+    padding-right:10px;
+    padding-left:10px;
+    border: 2px solid snow;
+    border-bottom: none;
+    border-top: none;
+}
+
+.background{
+    background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 100%;
+     width:100%;
+     position: absolute;
+     filter:blur(5px);
+     top: 0;
+     left: 0;
+     z-index: -1;
+}
+
+.modal_srr{
+    padding-top:30px;
+    padding-bottom: 20px;
+}
+
+.modal_overview{
+    border: 2px solid snow;
+    border-left: none;
+    border-right: none;
+    padding: 10px;
+}
+
+.modal_button-favorite{
+    float:right;
+    background-color: transparent;
+    color: rgb(80, 80, 80); 
+    border: 1px solid rgb(80, 80, 80); 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.modal_buttons_close{
+    font-size: 25px;
+    word-spacing: 10px;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+    color: rgb(231, 231, 231)
+}
+
+.modal_buttons_next{
+    font-size: 25px;
+    word-spacing: 10px;
+    background: transparent;
+    border: none;
+    cursor:pointer;
+    color: snow;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+}
+
+.pagination button {
+    border: 1px solid black;
+    border-right: none;
+    background-color: transparent;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: rgba(240, 240, 240, 0.5);
+}
+
+.pagination button:disabled {
+    background-color: rgba(224, 224, 224, 0.5);
+    color: #999;
+}
+
+.pagination button.page-button {
+    color: #999;
+}
+
+.pagination button.page-button:disabled {
+    cursor: not-allowed;
+}
+
+.pagination button#first,
+.pagination button#last,
+.pagination button.page-button:disabled {
+    color: green;
+}
+
+.pagination button.page-button {
+    font-weight: normal;
+}
+
+.pagination button.page-button:disabled {
+    font-weight: bold;
+}
+
+.pagination button#last{
+    border: 1px solid black;
+}
+
+.movie_container_favorite {
+    display: flex; 
+    margin-bottom: 20px; 
+}
+
+.movie_poster_favorite {
+    flex: 0 0 100px; 
+}
+
+.movie_poster_favorite img {
+    width: 100%; 
+    height: auto; 
+}
+
+.movie_info_favorite {
+    flex-grow: 1; 
+    padding-left: 20px; 
+    position: relative;
+}
+
+.movie_info_favorite h3 {
+    margin: 0; 
+}
+
+.movie_info_favorite p {
+    margin: 5px 0 0; 
+}
+
+.favorite_button {
+    position: absolute; 
+    right: 10px; 
+    top: 0;
+    background-color: transparent;
+    color: rgb(80, 80, 80); 
+    border: 1px solid rgb(80, 80, 80); 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+.favorite_button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
